@@ -1,0 +1,35 @@
+artcode_cfg:
+  params:
+    use_vae: true
+    content_weight: !!python/float 1.0
+    code_weight: !!python/float 1.0
+    threshold_b: 70
+    threshold_w: 180
+    correct_b: 10
+    correct_w: 245
+    learning_rate: !!python/float 0.02
+    code_loss: '1*code'
+    content_loss: '1*vincent'
+
+
+vae_cfg:
+  params:
+    block_out_channels: !!python/tuple
+    - 128
+    - 256
+    - 512
+    - 512
+    down_block_types: !!python/tuple
+    - DownEncoderBlock2D
+    - DownEncoderBlock2D
+    - DownEncoderBlock2D
+    - DownEncoderBlock2D
+    in_channels: 3
+    latent_channels: 4
+    layers_per_block: 2
+    out_channels: 3
+    up_block_types: !!python/tuple
+    - UpDecoderBlock2D
+    - UpDecoderBlock2D
+    - UpDecoderBlock2D
+    - UpDecoderBlock2D

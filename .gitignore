@@ -1,0 +1,13 @@
+data
+checkpoints
+*__pycache__*
+scripts
+out
+*.zip
+final
+demo
+*.safetensors
+*.th
+*.pt
+scripts
+T2QR_preprocess
